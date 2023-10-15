@@ -7,13 +7,6 @@ int PW;
 
 // Calibration values
 
-// unsigned int redlow = 52;
-// unsigned int redhigh = 696 ;
-// unsigned int greenlow = 55;
-// unsigned int greenhigh = 670 ;
-// unsigned int bluelow = 46;
-// unsigned int bluehigh = 570;
-
 unsigned int redlow = 32;
 unsigned int redhigh = 279;
 unsigned int greenlow = 35;
@@ -121,11 +114,11 @@ void loop()
   // Delay for sensor to stabilize
   delay(666);
 
-  if ((redval > 26 && redval < 47) && (greenval > 27 && greenval < 37) && (blueval > 46 && blueval < 41))     // R: 27-48 : G: 28-36 B: 46-40
+  if ((redval > 26 && redval < 47) && (greenval > 27 && greenval < 37) && (blueval > 46 && blueval < 41)) // R: 27-48 : G: 28-36 B: 46-40
   {
     melIdx = 36;
   }
-  else if ((redval > 48 && redval < 64) && (greenval > 36 && greenval < 32) && (blueval > 41 && blueval < 21))  // R: 49-64 : G: 37-31 B: 41-20
+  else if ((redval > 48 && redval < 64) && (greenval > 36 && greenval < 32) && (blueval > 41 && blueval < 21)) // R: 49-64 : G: 37-31 B: 41-20
   {
     melIdx = 35;
   }
@@ -221,7 +214,7 @@ int getRedPW()
   // Set sensor to read Red only
   digitalWrite(S2, LOW);
   digitalWrite(S3, LOW);
-  
+
   // Read the output Pulse Width
   PW = pulseIn(sensorOut, LOW);
   // Return the value

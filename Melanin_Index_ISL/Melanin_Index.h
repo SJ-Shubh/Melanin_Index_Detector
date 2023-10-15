@@ -1,6 +1,5 @@
 // include the library code:
 #include <stdlib.h>
-#include <Wire.h>
 #include "SparkFunISL29125.h"
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
