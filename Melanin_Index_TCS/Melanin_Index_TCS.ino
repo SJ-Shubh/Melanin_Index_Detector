@@ -67,6 +67,22 @@ void loop()
   unsigned int blue = getBluePW();
   delay(333);
 
+serial.print(x);
+
+//this shit is mine 
+int red2,green2,blue2;
+
+red2=red*red;
+blue2=blue*blue;
+green2=green*green;
+
+int x;
+x*x=red2+green2+blue2;
+ 
+
+//this shit is mine
+
+
   // Print out readings
   Serial.print("Raw Readings\n");
   Serial.print("Red: ");
