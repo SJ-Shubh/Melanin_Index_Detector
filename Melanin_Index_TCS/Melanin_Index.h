@@ -31,4 +31,5 @@
 
 #define OLED_RESET LED_BUILTIN // Reset pin # (or -1 if sharing Arduino reset pin
 
-Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
+Adafruit_SSD1306 display(SCREEN_WIDTH,
+ SCREEN_HEIGHT, &Wire, OLED_RESET);
