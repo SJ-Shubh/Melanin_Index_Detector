@@ -88,27 +88,33 @@ void loop()
   greenval = constrain(greenV, 0, 255);
   blueval = constrain(blueV, 0, 255);
 
-  // redval=36;
-  // greenval=30;
-  // blueval=42;
 
-//this shit is mine 
-int red2, green2, blue2;
-int x,y;
+  // this shit is mine
+  unsigned int red2, green2, blue2;
+  unsigned int x, y;
 
-red2=red*red;
-blue2=blue*blue;
-green2=green*green;
+  Serial.print("Hex Readings\n");
+  Serial.print("Red: ");
+  Serial.print(red, HEX);
+  Serial.print(" - Green: ");
+  Serial.print(green, HEX);
+  Serial.print(" - Blue: ");
+  Serial.print(blue, HEX);
+  Serial.println("\n");
+  delay(333);
 
-y= x * x;
-y= red2 + green2 + blue2;
+  red2 = red * red;
+  blue2 = blue * blue;
+  green2 = green * green;
 
- 
-Serial.print("Something : ");
-Serial.print(y);
-Serial.println("\n");
+  y = x * x;
+  y = red2 + green2 + blue2;
 
-//this shit is mine
+  Serial.print("Something : ");
+  Serial.print(y, HEX);
+  Serial.println("\n");
+
+  // this shit is mine
 
   Serial.print("Mapped Readings\n");
   Serial.print("R: ");
