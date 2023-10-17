@@ -13,6 +13,7 @@ unsigned int greenlow = 35;
 unsigned int greenhigh = 275;
 unsigned int bluelow = 29;
 unsigned int bluehigh = 248;
+
 void setup()
 {
 
@@ -67,22 +68,6 @@ void loop()
   unsigned int blue = getBluePW();
   delay(333);
 
-
-//this shit is mine 
-int red2,green2,blue2;
-
-red2=red*red;
-blue2=blue*blue;
-green2=green*green;
-
-int x;
-x*x=red2+green2+blue2;
- 
-serial.print(x);
-
-//this shit is mine
-
-
   // Print out readings
   Serial.print("Raw Readings\n");
   Serial.print("Red: ");
@@ -107,6 +92,22 @@ serial.print(x);
   // redval=36;
   // greenval=30;
   // blueval=42;
+
+//this shit is mine 
+int red2, green2, blue2;
+int x,y;
+
+red2=red*red;
+blue2=blue*blue;
+green2=green*green;
+
+y= x * x;
+y= red2 + green2 + blue2;
+
+ 
+Serial.print(x);
+
+//this shit is mine
 
   Serial.print("Mapped Readings\n");
   Serial.print("R: ");
