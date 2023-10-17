@@ -90,6 +90,7 @@ void loop()
 
 
   // this shit is mine
+  
   unsigned int red2, green2, blue2;
   unsigned int x, y;
 
@@ -111,7 +112,7 @@ void loop()
   y = red2 + green2 + blue2;
 
   Serial.print("Something : ");
-  Serial.print(y, HEX);
+  Serial.print(x, HEX);
   Serial.println("\n");
 
   // this shit is mine
