@@ -4,6 +4,7 @@ int redval = 0;
 int blueval = 0;
 int greenval = 0;
 int PW;
+int melIdx = 0;
 
 // Calibration values
 
@@ -55,9 +56,7 @@ void setup()
   display.clearDisplay();
   delay(666);
 }
-int melIdx = 0;
 
-// Read sensor values for each color and print them to serial monitor
 void loop()
 {
   // Read sensor values (16 bit integers)
@@ -105,7 +104,9 @@ y= x * x;
 y= red2 + green2 + blue2;
 
  
-Serial.print(x);
+Serial.print("Something : ");
+Serial.print(y);
+Serial.println("\n");
 
 //this shit is mine
 
